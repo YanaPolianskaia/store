@@ -1,0 +1,16 @@
+{% block title %} Форма добавления {% endblock %}
+{% block content%}
+  <div class="form">
+    <h1>Форма добавления</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.name}} <br>
+        {{form.price}} <br>
+        {{form.quantity}} <br>
+        {{form.image}} <br>
+        {{form.size}} <br>
+        <span>{{error}}</span>
+        <button type="submit" >Добавить</button>
+    </form>
+  </div>
+{%endblock%}
